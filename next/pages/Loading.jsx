@@ -1,6 +1,8 @@
+import loadingStyle from '../styles/loading.module.scss'
+
 const Loading = () => {
     return(
-        <div>Now Loading...</div>
+        <div className={loadingStyle.nowl}>Now Loading...</div>
     )
 }
 
