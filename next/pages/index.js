@@ -17,7 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-
+  const [loading, nowLoading] = useState(true);
 
   return (
     <Layout home>
