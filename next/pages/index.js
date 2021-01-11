@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react';
 
+import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
@@ -15,6 +17,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+
+
   return (
     <Layout home>
     <div className="container">
@@ -26,7 +30,7 @@ export default function Home({ allPostsData }) {
       <main>
       <h1 className="title">
         Read{' '}
-        <Link href="/posts/first-post">
+        <Link href="/posts/pre-rendering">
           <a>this page!</a>
         </Link>
       </h1>
@@ -42,12 +46,14 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
+            <Link href={`/posts/${id}`}>
+              <a>{title}</a>
+            </Link>
+            <br />
+            <small className={utilStyles.lightText}>
+              <Date dateString={date} />
+            </small>
+          </li>
           ))}
         </ul>
       </section>
