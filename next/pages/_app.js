@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import '../styles/global.css'
+import '../styles/global.scss'
 import Loading from './Loading';
 
 export default function App({ Component, pageProps }) {
