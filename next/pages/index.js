@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState } from 'react';
 
 import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
@@ -17,7 +16,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const [loading, nowLoading] = useState(true);
 
   return (
     <Layout home>
@@ -62,3 +60,4 @@ export default function Home({ allPostsData }) {
     </Layout>
   )
 }
+
