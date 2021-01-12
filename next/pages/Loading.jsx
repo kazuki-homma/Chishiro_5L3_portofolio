@@ -11,9 +11,9 @@ const Loading = () => {
     });
 
     return(
-            <section className={loadingStyle.body}>
-              <div className={loadingStyle.nowl}>Now Loading...</div>
-            </section>
+        <section className={loadingStyle.body}>
+            <div className={loadingStyle.nowl}>Now Loading...</div>
+        </section>
     )
 }
 
