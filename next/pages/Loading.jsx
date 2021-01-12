@@ -1,19 +1,46 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Transition } from 'react-transition-group';
 import loadingStyle from '../styles/loading.module.scss'
 
-const Loading = () => {
+const duration = 2000;
 
-    useEffect(() => {
-        const loading = document.querySelector("div")
-        loading.animate({
-            opacity: [0, 1]
-        }, 1500)
-    });
+const defaultStyle = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 0,
+}
+
+const transitionStyles = {
+    entering: { opacity: 1 },
+    entered:  { opacity: 0 },
+    exiting:  { opacity: 1 },
+    exited:  { opacity: 1 },
+};
+
+const Loading = () => {
+    const [inProp, setInProp] = useState(false);
+    setTimeout(() => setInProp(true),2000);
+
+    // useEffect(() => {
+    //     const loading = document.querySelector("div")
+    //     loading.animate({
+    //         opacity: [0, 1]
+    //     }, 1500)
+    // });
 
     return(
-            <section className={loadingStyle.body}>
-              <div className={loadingStyle.nowl}>Now Loading...</div>
-            </section>
+            <Transition in={inProp} timeout={duration}>
+                {state => (
+                <div style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state]
+                }}>
+                    <div className={loadingStyle.body}>
+                        <div className={loadingStyle.nowl}>Now Loading...</div>
+                    </div>
+                </div>
+                )}
+            </Transition>
+
     )
 }
 
