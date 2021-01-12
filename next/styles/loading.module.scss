@@ -1,9 +1,14 @@
 .body {
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color: #fff;
 }
 
-.nowl {
-    font-weight: bold;
+.svg {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
