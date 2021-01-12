@@ -20,13 +20,6 @@ const Loading = () => {
     const [inProp, setInProp] = useState(false);
     setTimeout(() => setInProp(true),2000);
 
-    // useEffect(() => {
-    //     const loading = document.querySelector("div")
-    //     loading.animate({
-    //         opacity: [0, 1]
-    //     }, 1500)
-    // });
-
     return(
             <Transition in={inProp} timeout={duration}>
                 {state => (
@@ -35,7 +28,10 @@ const Loading = () => {
                     ...transitionStyles[state]
                 }}>
                     <div className={loadingStyle.body}>
-                        <div className={loadingStyle.nowl}>Now Loading...</div>
+                      <div className={loadingStyle.svg}>
+                        <img src="/portofolio.svg" alt="PORTOFOLIO" className="portofolio_loading_svg" />
+                        <h1>Chishiro_5L3</h1>
+                      </div>
                     </div>
                 </div>
                 )}
