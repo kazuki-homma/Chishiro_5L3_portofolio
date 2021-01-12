@@ -20,13 +20,6 @@ const Loading = () => {
     const [inProp, setInProp] = useState(false);
     setTimeout(() => setInProp(true),2000);
 
-    // useEffect(() => {
-    //     const loading = document.querySelector("div")
-    //     loading.animate({
-    //         opacity: [0, 1]
-    //     }, 1500)
-    // });
-
     return(
             <Transition in={inProp} timeout={duration}>
                 {state => (
