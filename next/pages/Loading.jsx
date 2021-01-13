@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Transition } from 'react-transition-group';
 import loadingStyle from '../styles/loading.module.scss'
 
