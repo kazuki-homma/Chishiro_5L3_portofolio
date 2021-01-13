@@ -30,13 +30,14 @@ const Loading = () => {
                     <div className={loadingStyle.body}>
                       <div className={loadingStyle.svg}>
                         <img src="/portofolio.svg" alt="PORTOFOLIO" className="portofolio_loading_svg" />
-                        <h1>Chishiro_5L3</h1>
+                        <div>
+                          Chishiro_5L3
+                        </div>
                       </div>
                     </div>
                 </div>
                 )}
             </Transition>
-
     )
 }
 
