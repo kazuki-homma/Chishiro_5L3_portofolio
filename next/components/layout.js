@@ -3,6 +3,8 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
+import HomeTop from '../pages/HomeTop';
+
 const name = 'Chishiro_5L3'
 export const siteTitle = 'Next.js Sample Website'
 
@@ -27,12 +29,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <HomeTop />
           </>
         ) : (
           <>
