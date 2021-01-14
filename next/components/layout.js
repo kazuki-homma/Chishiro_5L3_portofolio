@@ -1,15 +1,38 @@
 import Head from 'next/head'
 import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.css'
+import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import { createStyles, makeStyles } from "@material-ui/core/styles";
+import MenuIcon from "@material-ui/icons/Menu";
 
 import HomeTop from '../pages/HomeTop';
 
 const name = 'Chishiro_5L3'
 export const siteTitle = 'Next.js Sample Website'
 
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+      color: "#388e3c",
+      backgroundColor: "#81c784"
+    },
+    menuButton: {
+      marginRight: theme.spacing(2)
+    },
+    title: {
+      flexGrow: 1,
+      textAlign: "center"
+    }
+  })
+);
+
+
 export default function Layout({ children, home }) {
+  const classes = useStyles();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,12 +51,13 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-      <AppBar position="static">
+      <AppBar position="static" color="default">
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
           </IconButton>
-          <Typography variant="h6">
-            News
+          <Typography variant="h6" className={classes.title}>
+            Chishiro_5L3
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
