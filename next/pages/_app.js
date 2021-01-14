@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   ThemeProvider as MaterialUIThemeProvider
 } from '@material-ui/styles'
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import theme from '../styles/theme'
 import '../styles/global.scss'
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
     setTimeout(() => nowLoading(false), 5800);
     return (
         <MaterialUIThemeProvider theme={theme}>
+          <CssBaseline />
           {isLoading
             ? <Loading />
             : <Component {...pageProps} />
