@@ -5,6 +5,10 @@ import Link from 'next/link'
 import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
+import { faTwitter } from '@fortawesome/fontawesome-free';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconContext } from "react-icons";
+import { FaTwitter, FaInstagram, FaFacebook} from 'react-icons/fa';
 
 import HomeTop from '../pages/HomeTop';
 
@@ -59,7 +63,13 @@ export default function Layout({ children, home }) {
             Chishiro_5L3
           </Typography>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+            <FaTwitter />
+          </IconButton>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <FaInstagram />
+          </IconButton>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <FaFacebook />
           </IconButton>
         </Toolbar>
       </AppBar>
