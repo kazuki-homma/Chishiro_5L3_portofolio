@@ -14,17 +14,19 @@ export const siteTitle = 'Next.js Sample Website'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {
+    appbar: {
       flexGrow: 1,
-      color: "#388e3c",
-      backgroundColor: "#81c784"
+      color: "#000",
+      backgroundColor: "transparent",
+      boxShadow: 'none',
+      position: 'fixed'
     },
     menuButton: {
       marginRight: theme.spacing(2)
     },
     title: {
       flexGrow: 1,
-      textAlign: "center"
+      textAlign: "left"
     }
   })
 );
@@ -51,15 +53,14 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
             Chishiro_5L3
           </Typography>
-          <Button color="inherit">Login</Button>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
         {home ? (

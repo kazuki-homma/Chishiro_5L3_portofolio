@@ -25,19 +25,20 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-      <h1 className="title">
-        Read{' '}
-        <Link href="/posts/pre-rendering">
-          <a>this page!</a>
-        </Link>
-      </h1>
+      <main className={utilStyles.mainContainer}>
         <section className={utilStyles.headingMd}>
-          <p>[Your Self Introduction]</p>
-          <p>
-            (This is a sample website - you’ll be building a site like this on{' '}
-            <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-          </p>
+          <h1 className={utilStyles.headingLg}>About me</h1>
+          <div>
+            <p>現在法政大学3年生のエンジニアです。趣味は映画鑑賞</p>
+          </div>
+          <Link href={'/'}>More⇨</Link>
+        </section>
+        <section className={utilStyles.headingMd}>
+          <h1 className={utilStyles.headingLg}>Skills and qualifications</h1>
+          <div>
+            <p>フロントエンド</p>
+          </div>
+          <Link href={'/'}>More⇨</Link>
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -55,6 +56,12 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <section className={utilStyles.headingMd}>
+          <h1 className={utilStyles.headingLg}>Contact</h1>
+          <div>
+            <p>今はまだnothing</p>
+          </div>
+        </section>
       </main>
     </div>
     </Layout>
