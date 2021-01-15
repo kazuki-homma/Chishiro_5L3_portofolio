@@ -54,6 +54,14 @@
 
 .topDesign {
   height: 100vh;
+  position: relative;
+   & h1 {
+     position: absolute;
+     top: 42%;
+     left: 50%;
+     -webkit-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+   }
 }
 
 .centerBall {
@@ -81,4 +89,10 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: -20;
+}
+
+.concertTop {
+  font-family: 'Concert One', cursive;
+  font-size: 60px;
+
 }

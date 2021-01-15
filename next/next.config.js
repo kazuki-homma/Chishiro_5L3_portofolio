@@ -18,3 +18,9 @@ module.exports = (phase, { defaultConfig }) => {
 }
 
 module.exports = withVideos();
+
+module.exports = {
+  experimental: {
+    optimizeFonts: true,
+  },
+};

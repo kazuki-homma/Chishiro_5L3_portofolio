@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from "next/head"
 import {
   ThemeProvider as MaterialUIThemeProvider
 } from '@material-ui/styles'
@@ -22,6 +23,10 @@ export default function App({ Component, pageProps }) {
     setTimeout(() => nowLoading(false), 5800);
     return (
         <MaterialUIThemeProvider theme={theme}>
+          <Head>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet" />
+          </Head>
           <CssBaseline />
           {isLoading
             ? <Loading />
