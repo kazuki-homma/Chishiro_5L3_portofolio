@@ -49,6 +49,9 @@ export default function Home({ allPostsData }) {
         </div>
         <section className={utilStyles.topDesign}>
           <h1 className={utilStyles.concertTop}>Chishiro_5L3</h1>
+          <div className={utilStyles.firstOutBall}></div>
+          <div className={utilStyles.secondOutBall}></div>
+          <div className={utilStyles.thirdOutBall}></div>
         </section>
         <section className={utilStyles.headingMd}>
           <h1 className={utilStyles.headingLg}>About me</h1>
