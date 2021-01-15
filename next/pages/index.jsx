@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
+import Works from '../components/Works'
 import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/posts'
 
@@ -32,6 +33,10 @@ export default function Home({ allPostsData }) {
             <p>現在法政大学3年生のエンジニアです。趣味は映画鑑賞</p>
           </div>
           <Link href={'/'}>More⇨</Link>
+        </section>
+        <section className={utilStyles.headingMd}>
+          <h1 className={utilStyles.headingLg}>Works</h1>
+          <Works />
         </section>
         <section className={utilStyles.headingMd}>
           <h1 className={utilStyles.headingLg}>Skills and qualifications</h1>
