@@ -19,6 +19,7 @@ const HomeTop = () => {
             <source src={'/fnj3w-aimn2.mp4'} type="video/mp4" />
               Your browser does not support the video tag.
           </video>
+          {/* <h1 className={hometopStyle.title}>Chishiro_5L3</h1> */}
         </div>
     );
 }

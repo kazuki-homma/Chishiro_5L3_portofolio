@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) =>
     },
     title: {
       flexGrow: 1,
-      textAlign: "left"
+      textAlign: "left",
+      fontWeight: "bold"
     }
   })
 );
