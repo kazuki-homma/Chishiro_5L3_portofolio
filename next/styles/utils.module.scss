@@ -51,3 +51,34 @@
   width: 90%;
   margin: 0 5%;
 }
+
+.topDesign {
+  height: 100vh;
+}
+
+.centerBall {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #555;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -40;
+  overflow: hidden;
+}
+
+.centerInBall {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -20;
+}

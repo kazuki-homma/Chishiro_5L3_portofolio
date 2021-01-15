@@ -74,15 +74,6 @@ export default function Layout({ children, home }) {
           </IconButton>
         </Toolbar>
       </AppBar>
-        {home ? (
-          <>
-            <HomeTop />
-          </>
-        ) : (
-          <>
-            <div>Topページじゃなければこの文章が表示されています</div>
-          </>
-        )}
       </header>
       <main>{children}</main>
       {!home && (
