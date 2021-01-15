@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import { Toolbar, IconButton, Typography, Button } from '@material-ui/core';
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { faTwitter } from '@fortawesome/fontawesome-free';
@@ -18,20 +18,25 @@ export const siteTitle = 'Next.js Sample Website'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    appbar: {
-      flexGrow: 1,
-      color: "#000",
-      backgroundColor: "transparent",
-      boxShadow: 'none',
-      position: 'fixed'
+    snsButtons: {
+      width: '60px',
+      height: '100%',
+      position: 'fixed',
+      top: '0',
+      right: '40px'
     },
-    menuButton: {
-      marginRight: theme.spacing(2)
+    snsToolBar: {
+      padding: '0',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
     },
-    title: {
-      flexGrow: 1,
-      textAlign: "left",
-      fontWeight: "bold"
+    snsMark: {
+      display: 'inline-block',
+      fontSize: "20px",
+      padding: "10px",
+      margin: "0"
     }
   })
 );
@@ -58,24 +63,21 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-      <AppBar position="static" className={classes.appbar}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Chishiro_5L3
-          </Typography>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+      </header>
+      <main>{children}</main>
+      <div className={classes.snsButtons}>
+        <Toolbar className={classes.snsToolBar}>
+          <IconButton edge="start" className={classes.snsMark} color="inherit" aria-label="menu">
             <FaTwitter />
           </IconButton>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.snsMark} color="inherit" aria-label="menu">
             <FaInstagram />
           </IconButton>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.snsMark} color="inherit" aria-label="menu">
             <FaFacebook />
           </IconButton>
         </Toolbar>
-      </AppBar>
-      </header>
-      <main>{children}</main>
+      </div>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">

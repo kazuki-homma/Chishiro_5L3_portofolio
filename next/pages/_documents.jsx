@@ -34,7 +34,6 @@ export default class CustomDocument extends NextDocument {
   }
 
   render() {
-    console.log(props);
     return (
       <Html lang="ja">
         <Head />
