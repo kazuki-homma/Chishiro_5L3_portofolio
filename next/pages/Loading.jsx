@@ -28,12 +28,7 @@ const Loading = () => {
                     ...transitionStyles[state]
                 }}>
                     <div className={loadingStyle.body}>
-                      <div className={loadingStyle.svg}>
-                        <img src="/portofolio.svg" alt="PORTOFOLIO" className="portofolio_loading_svg" />
-                        <div>
-                          Chishiro_5L3
-                        </div>
-                      </div>
+                      xxx
                     </div>
                 </div>
                 )}
