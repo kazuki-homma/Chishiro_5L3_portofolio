@@ -129,3 +129,21 @@
   font-size: 60px;
 
 }
+
+.about {
+  width: 100vw;
+  height: 400px;
+  -webkit-transform: translate(-5%, 0%);
+  transform: translate(-5%, 0%);
+  background-color: #283135;
+  padding: 5% 15%;
+
+  & h1, p {
+    font-family: 'Concert One', cursive;
+    color: #fff;
+  }
+
+  & p {
+    margin: 3px;
+  }
+}
