@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
@@ -16,26 +17,6 @@ export const siteTitle = 'Next.js Sample Website'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    snsButtons: {
-      width: '60px',
-      height: '100%',
-      position: 'fixed',
-      top: '0',
-      right: '40px'
-    },
-    snsToolBar: {
-      padding: '0',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center'
-    },
-    snsMark: {
-      display: 'inline-block',
-      fontSize: "20px",
-      padding: "10px",
-      margin: "0"
-    }
   })
 );
 
@@ -67,15 +48,15 @@ export default function Layout({ children, home }) {
        <div className={styles.headerElement}>WORKS</div>
       </header>
       <main>{children}</main>
-      <div className={classes.snsButtons}>
-        <Toolbar className={classes.snsToolBar}>
-          <IconButton edge="start" className={classes.snsMark} color="inherit" aria-label="menu">
+      <div className={styles.snsButtons}>
+        <Toolbar className={styles.snsToolBar}>
+          <IconButton edge="start" className={styles.snsMark} color="inherit" aria-label="menu">
             <FaTwitter />
           </IconButton>
-          <IconButton edge="start" className={classes.snsMark} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={styles.snsMark} color="inherit" aria-label="menu">
             <FaInstagram />
           </IconButton>
-          <IconButton edge="start" className={classes.snsMark} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={styles.snsMark} color="inherit" aria-label="menu">
             <FaFacebook />
           </IconButton>
         </Toolbar>

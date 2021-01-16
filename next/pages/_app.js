@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Head from "next/head"
 import {
   ThemeProvider as MaterialUIThemeProvider
@@ -7,10 +7,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import theme from '../styles/theme'
 import '../styles/global.scss'
-import Loading from './Loading';
 
 export default function App({ Component, pageProps }) {
-    const [isLoading, nowLoading] = useState(true);
 
     // Remove the server-side injected CSS.(https://material-ui.com/guides/server-rendering/)
     useEffect(() => {
@@ -20,7 +18,6 @@ export default function App({ Component, pageProps }) {
       }
     }, [])
 
-    setTimeout(() => nowLoading(false), 5800);
     return (
         <MaterialUIThemeProvider theme={theme}>
           <Head>
@@ -28,10 +25,7 @@ export default function App({ Component, pageProps }) {
             <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet" />
           </Head>
           <CssBaseline />
-          {isLoading
-            ? <Loading />
-            : <Component {...pageProps} />
-          }
+          <Component {...pageProps} />
         </MaterialUIThemeProvider>
     );
 }

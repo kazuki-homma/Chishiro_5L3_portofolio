@@ -48,7 +48,7 @@ export default function WorkCard(props) {
   };
 
   return (
-    <Link href={`/works/${props.id}`}>
+    <Link href={'/'}>
     <Card className={classes.root}>
       <CardHeader
         avatar={
