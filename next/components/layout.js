@@ -10,8 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconContext } from "react-icons";
 import { FaTwitter, FaInstagram, FaFacebook} from 'react-icons/fa';
 
-import HomeTop from '../pages/HomeTop';
-
 const name = 'Chishiro_5L3'
 export const siteTitle = 'Next.js Sample Website'
 
@@ -63,6 +61,10 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
+       <div className={styles.headerElement}>ABOUT</div>
+       <div className={styles.headerElement}>BLOG</div>
+       <div className={styles.headerElement}>CONTACT</div>
+       <div className={styles.headerElement}>WORKS</div>
       </header>
       <main>{children}</main>
       <div className={classes.snsButtons}>

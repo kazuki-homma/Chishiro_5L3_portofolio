@@ -95,6 +95,46 @@
      border-radius: 50%;
      z-index: -20;
    }
+
+   & .news {
+     width: 500px;
+     position: absolute;
+     top: 90%;
+     left: 70px;
+     font-weight:bold;
+     color: #808080;
+     & p {
+       margin: 0;
+     }
+   }
+
+   & .scrollSign {
+     transform: rotate(90deg);
+     position: absolute;
+     top: 80%;
+     left: 0px;
+     font-family: 'Concert One', cursive;
+
+     &::after {
+       content:"";
+       display:block;
+       height:2px;
+       background-color:#283135;
+       position:absolute;
+       bottom:9px;
+       left:55px;
+       animation: scrollSign 1s ease 0s infinite alternate none running;
+     }
+
+     @keyframes scrollSign {
+        0% {
+          width: 0px;
+        }
+        100% {
+          width: 103px;
+        }
+     }
+   }
 }
 
 .centerBall {
