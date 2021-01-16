@@ -54,11 +54,11 @@ export default function Home({ allPostsData }) {
           <div className={utilStyles.thirdOutBall}></div>
         </section>
         <section className={utilStyles.headingMd}>
-          <h1 className={utilStyles.headingLg}>About me</h1>
-          <div>
-            <p>現在法政大学3年生のエンジニアです。趣味は映画鑑賞</p>
+          <div className={utilStyles.about}>
+            <h1>About --</h1>
+            <p>法政大学3年</p>
+            <p>駆け出しエンジニア</p>
           </div>
-          <Link href={'/'}>More⇨</Link>
         </section>
         <section className={utilStyles.headingMd}>
           <h1 className={utilStyles.headingLg}>Works</h1>
