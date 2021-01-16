@@ -52,6 +52,11 @@ export default function Home({ allPostsData }) {
           <div className={utilStyles.firstOutBall}></div>
           <div className={utilStyles.secondOutBall}></div>
           <div className={utilStyles.thirdOutBall}></div>
+          <div className={utilStyles.news}>
+            <p>News: Portofolioサイトを作成しました</p>
+            <p>今後はブログやQiitaなどにも力を入れていく予定です。</p>
+          </div>
+          <div className={utilStyles.scrollSign}>SCROLL</div>
         </section>
         <section className={utilStyles.headingMd}>
           <div className={utilStyles.about}>
