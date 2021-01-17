@@ -16,43 +16,45 @@
       font-family: 'Concert One', cursive;
     }
   }
-}
 
-.snsButtons {
-  width: 60px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 40px;
-}
-.snsToolBar {
-  padding: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.snsMark {
-  display: inline-block;
-  font-size: 20px;
-  padding: 10px;
-  margin: 0;
-}
+  & .snsButtons {
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 40px;
 
-.footer {
-  width: 100%;
-  height: 300px;
-  font-family: 'Concert One', cursive;
-  color: #fff;
-  background-color: #283135;
+    & .snsToolBar {
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      & .snsMark {
+        display: inline-block;
+        font-size: 20px;
+        padding: 10px;
+        margin: 0;
+      }
+    }
+  }
 
-  & .footerContainer {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
+  & .footer {
+    width: 100%;
+    height: 300px;
+    font-family: 'Concert One', cursive;
+    color: #fff;
+    background-color: #283135;
 
-    & h3 {
-      text-align: center;
+    & .footerContainer {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 0;
+
+      & h3 {
+        text-align: center;
+      }
     }
   }
 }
