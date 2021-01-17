@@ -10,6 +10,7 @@ import { FaTwitter, FaInstagram, FaFacebook} from 'react-icons/fa';
 
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
+import Header from './Header';
 import Footer from './Footer';
 
 const name = 'Chishiro_5L3'
@@ -42,12 +43,10 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-       <div className={styles.headerElement}>ABOUT</div>
-       <div className={styles.headerElement}>BLOG</div>
-       <div className={styles.headerElement}>CONTACT</div>
-       <div className={styles.headerElement}>WORKS</div>
-      </header>
+      <Header 
+        header={styles.header}
+        headerElement={styles.headerElement}
+      />
       <main>{children}</main>
       <div className={styles.snsButtons}>
         <Toolbar className={styles.snsToolBar}>
@@ -63,7 +62,7 @@ export default function Layout({ children, home }) {
         </Toolbar>
       </div>
       {!home && (
-        <div className={styles.backToHome}>
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
