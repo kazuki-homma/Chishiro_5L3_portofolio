@@ -1,17 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Toolbar, IconButton, Typography, Button } from '@material-ui/core';
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import { faTwitter } from '@fortawesome/fontawesome-free';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconContext } from "react-icons";
-import { FaTwitter, FaInstagram, FaFacebook} from 'react-icons/fa';
 
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Header from './Header';
 import Footer from './Footer';
+import SnsButtons from './SnsButtons';
 
 const name = 'Chishiro_5L3'
 export const siteTitle = 'Next.js Sample Website'
@@ -48,19 +44,11 @@ export default function Layout({ children, home }) {
         headerElement={styles.headerElement}
       />
       <main>{children}</main>
-      <div className={styles.snsButtons}>
-        <Toolbar className={styles.snsToolBar}>
-          <IconButton edge="start" className={styles.snsMark} color="inherit" aria-label="menu">
-            <FaTwitter />
-          </IconButton>
-          <IconButton edge="start" className={styles.snsMark} color="inherit" aria-label="menu">
-            <FaInstagram />
-          </IconButton>
-          <IconButton edge="start" className={styles.snsMark} color="inherit" aria-label="menu">
-            <FaFacebook />
-          </IconButton>
-        </Toolbar>
-      </div>
+      <SnsButtons 
+        snsButtons={styles.snsButtons}
+        snsToolBar={styles.snsToolBar}
+        snsMark={styles.snsMark}
+      />
       {!home && (
         <div>
           <Link href="/">
