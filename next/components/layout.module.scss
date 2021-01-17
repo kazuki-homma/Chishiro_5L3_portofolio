@@ -47,3 +47,21 @@
   padding: 10px;
   margin: 0;
 }
+
+.footer {
+  width: 100%;
+  height: 300px;
+  font-family: 'Concert One', cursive;
+  color: #fff;
+  background-color: #283135;
+
+  & .footerContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    & h3 {
+      text-align: center;
+    }
+  }
+}
