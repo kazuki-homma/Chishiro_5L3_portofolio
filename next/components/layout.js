@@ -1,7 +1,4 @@
 import Head from 'next/head'
-
-import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 import { Toolbar, IconButton, Typography, Button } from '@material-ui/core';
 import { createStyles, makeStyles } from "@material-ui/core/styles";
@@ -10,6 +7,10 @@ import { faTwitter } from '@fortawesome/fontawesome-free';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconContext } from "react-icons";
 import { FaTwitter, FaInstagram, FaFacebook} from 'react-icons/fa';
+
+import styles from './layout.module.scss'
+import utilStyles from '../styles/utils.module.scss'
+import Footer from './Footer';
 
 const name = 'Chishiro_5L3'
 export const siteTitle = 'Next.js Sample Website'
@@ -68,6 +69,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   )
 }
