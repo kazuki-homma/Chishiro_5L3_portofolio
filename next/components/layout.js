@@ -50,6 +50,7 @@ export default function Layout({ children, home }) {
         centerBall={styles.centerBall}
         centerInBall={styles.centerInBall}
         topDesign={styles.topDesign}
+        video={styles.video}
         concertTop={styles.concertTop}
         firstOutBall={styles.firstOutBall}
         secondOutBall={styles.secondOutBall}

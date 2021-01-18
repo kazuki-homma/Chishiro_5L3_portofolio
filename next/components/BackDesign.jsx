@@ -9,13 +9,7 @@ const BackDesign = (props) => {
                 loop
                 autoPlay
                 muted
-                style={{
-                    position: "absolute",
-                    width: "750px",
-                    height: "auto",
-                    left: "-160px",
-                    top: 0,
-                }}
+                className={props.video}
             >
                 <source src={'/fnj3w-aimn2.mp4'} type="video/mp4" />
                 Your browser does not support the video tag.
