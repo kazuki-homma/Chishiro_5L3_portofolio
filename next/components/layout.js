@@ -43,10 +43,7 @@ export default function Layout({ children, home }) {
       <div className={styles.logo}>
         <img src="/logoImage.png" className={styles.logoImage}/>
       </div>
-      <Header 
-        header={styles.header}
-        headerElement={styles.headerElement}
-      />
+      <Header />
       <div className={styles.scrollSign}>SCROLL</div>
       <div className={styles.contentsContainer}>
       <BackDesign
@@ -55,9 +52,6 @@ export default function Layout({ children, home }) {
         topDesign={styles.topDesign}
         video={styles.video}
         concertTop={styles.concertTop}
-        firstOutBall={styles.firstOutBall}
-        secondOutBall={styles.secondOutBall}
-        thirdOutBall={styles.thirdOutBall}
         news={styles.news}
       />
       <main>{children}</main>

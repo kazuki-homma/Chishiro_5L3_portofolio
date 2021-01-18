@@ -19,9 +19,6 @@ const BackDesign = (props) => {
             </div>
             <section className={props.topDesign}>
                 <h1 className={props.concertTop}>Chishiro_5L3</h1>
-                <div className={props.firstOutBall}></div>
-                <div className={props.secondOutBall}></div>
-                <div className={props.thirdOutBall}></div>
                 <div className={props.news}>
                     <p>News: Portofolioサイトを作成しました</p>
                     <p>今後はブログやQiitaなどにも力を入れていく予定です。</p>

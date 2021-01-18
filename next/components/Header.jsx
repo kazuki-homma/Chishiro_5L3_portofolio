@@ -1,11 +1,15 @@
-const Header = (props) => {
+import styles from './layout.module.scss'
+
+const Header = () => {
     return (
-      <header className={props.header}>
-       <div className={props.headerElement}>ABOUT</div>
-       <div className={props.headerElement}>BLOG</div>
-       <div className={props.headerElement}>CONTACT</div>
-       <div className={props.headerElement}>WORKS</div>
+      <>
+      <header className={styles.header}>
+       <div className={styles.headerElement}>ABOUT</div>
+       <div className={styles.headerElement}>BLOG</div>
+       <div className={styles.headerElement}>CONTACT</div>
+       <div className={styles.headerElement}>WORKS</div>
       </header>
+      </>
     )
 }
 
