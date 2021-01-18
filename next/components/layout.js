@@ -8,6 +8,7 @@ import utilStyles from '../styles/utils.module.scss'
 import Header from './Header';
 import Footer from './Footer';
 import SnsButtons from './SnsButtons';
+import BackDesign from './BackDesign';
 
 const name = 'Chishiro_5L3'
 export const siteTitle = 'Next.js Sample Website'
@@ -43,7 +44,20 @@ export default function Layout({ children, home }) {
         header={styles.header}
         headerElement={styles.headerElement}
       />
+      <div className={styles.scrollSign}>SCROLL</div>
+      <div className={styles.contentsContainer}>
+      <BackDesign
+        centerBall={styles.centerBall}
+        centerInBall={styles.centerInBall}
+        topDesign={styles.topDesign}
+        concertTop={styles.concertTop}
+        firstOutBall={styles.firstOutBall}
+        secondOutBall={styles.secondOutBall}
+        thirdOutBall={styles.thirdOutBall}
+        news={styles.news}
+      />
       <main>{children}</main>
+      </div>
       <SnsButtons 
         snsButtons={styles.snsButtons}
         snsToolBar={styles.snsToolBar}

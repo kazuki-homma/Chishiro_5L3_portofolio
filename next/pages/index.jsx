@@ -25,39 +25,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={utilStyles.mainContainer}>
-        <div className={utilStyles.centerBall}>
-          <video
-            id="background-video"
-            loop
-            autoPlay
-            muted
-            style={{
-                position: "absolute",
-                width: "750px",
-                height: "auto",
-                left: "-160px",
-                top: 0,
-            }}
-          >
-            <source src={'/fnj3w-aimn2.mp4'} type="video/mp4" />
-              Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className={utilStyles.centerInBall}>
-        </div>
-        <section className={utilStyles.topDesign}>
-          <h1 className={utilStyles.concertTop}>Chishiro_5L3</h1>
-          <div className={utilStyles.firstOutBall}></div>
-          <div className={utilStyles.secondOutBall}></div>
-          <div className={utilStyles.thirdOutBall}></div>
-          <div className={utilStyles.news}>
-            <p>News: Portofolioサイトを作成しました</p>
-            <p>今後はブログやQiitaなどにも力を入れていく予定です。</p>
-          </div>
-          <div className={utilStyles.scrollSign}>SCROLL</div>
-        </section>
         <section className={utilStyles.headingMd}>
           <div className={utilStyles.about}>
             <h1>About --</h1>
