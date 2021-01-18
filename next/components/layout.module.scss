@@ -2,20 +2,17 @@
 	.container {
     width: 100vw;
 
-    & .header {
-      display: flex;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 30%;
-      height: 200px;
+    & .logo {
+      width: 30px;
+      height: 80px;
 
-      & .headerElement {
-        display: inline-block;
-        padding: 20px;
-        height: 60px;
-        font-family: 'Concert One', cursive;
+      & .logoImage {
+        width: 20px;
       }
+    }
+
+    & .header {
+      display: none;
     }
 
     & .snsButtons {
@@ -230,18 +227,29 @@
 .container {
   width: 100vw;
 
+  & .logo {
+    width: 80px;
+    height: 100px;
+    position: fixed;
+
+    & .logoImage {
+      width: 50px;
+      margin: 20px;
+    }
+  }
+
   & .header {
     display: flex;
     position: fixed;
     top: 0;
     right: 0;
-    width: 30%;
-    height: 200px;
+    width: 400px;
+    height: 80px;
 
     & .headerElement {
       display: inline-block;
-      padding: 20px;
-      height: 60px;
+      height: 20px;
+      margin: 25px;
       font-family: 'Concert One', cursive;
     }
   }
@@ -375,7 +383,7 @@
         left: 70%;
         background-color: #D3DEF1;
         border-radius: 50%;
-        z-index: -20;
+        z-index: -90;
         animation: firstOutBallAnimation 3s infinite;
       }
 

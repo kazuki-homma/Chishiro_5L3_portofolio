@@ -40,6 +40,9 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <div className={styles.logo}>
+        <img src="/logoImage.png" className={styles.logoImage}/>
+      </div>
       <Header 
         header={styles.header}
         headerElement={styles.headerElement}
