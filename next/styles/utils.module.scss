@@ -46,7 +46,10 @@
   }
   
   .listItem {
-    margin: 0 0 1.25rem;
+    margin: 0 0 10px;
+    background-color: #fff;
+    padding: 10px 10px 3px 10px;
+    border-radius: 5px;
   }
   
   .lightText {
@@ -87,8 +90,8 @@
 
   & .list {
     background-color: #ddd;
-    padding: 50px;
-    border-radius: 20px;
+    padding: 25px 50px;
+    border-radius: 10px;
     height: 500px;
   }
 
@@ -103,4 +106,10 @@
 
 .workDetail {
   margin: 0 ;
+}
+
+.blogTitle {
+  font-weight: bold;
+  margin: 5px 0 2px 0;
+  display: inline-block;
 }
