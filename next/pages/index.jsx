@@ -6,6 +6,8 @@ import Layout, { siteTitle } from '../components/layout'
 import Works from '../components/Works'
 import utilStyles from '../styles/utils.module.scss'
 import { getSortedPostsData } from '../lib/posts'
+import Blogs from '../components/Blogs'
+import Skills from '../components/Skills'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -33,34 +35,12 @@ export default function Home({ allPostsData }) {
             <p>駆け出しエンジニア</p>
           </div>
         </section>
+        <Works />
+        <Skills />
+        <Blogs 
+          allPostsData={allPostsData}
+        />
         <section className={utilStyles.headingMd}>
-          <h1 className={utilStyles.headingLg}>Works</h1>
-          <Works />
-        </section>
-        <section className={utilStyles.headingMd}>
-          <h1 className={utilStyles.headingLg}>Skills and qualifications</h1>
-          <div>
-            <p>フロントエンド</p>
-          </div>
-          <Link href={'/'}>More⇨</Link>
-        </section>
-        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
-          ))}
-        </ul>
-      </section>
-      <section className={utilStyles.headingMd}>
           <h1 className={utilStyles.headingLg}>Contact</h1>
           <div>
             <p>今はまだnothing</p>
