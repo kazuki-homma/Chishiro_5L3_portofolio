@@ -1,3 +1,9 @@
+.mainContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
 .heading2Xl {
     font-size: 2.5rem;
     line-height: 1.2;
@@ -50,8 +56,8 @@
 .about {
   width: 100vw;
   height: 400px;
-  -webkit-transform: translate(-5%, 0%);
-  transform: translate(-5%, 0%);
+  -webkit-transform: translate(-9.5%, 0%);
+  transform: translate(-9.5%, 0%);
   background-color: #283135;
   padding: 5% 15%;
 
@@ -63,4 +69,34 @@
   & p {
     margin: 3px;
   }
+}
+
+.section {
+  margin: 100px 0;
+  & .sectionTitle {
+    font-family: 'Concert One', cursive;
+    font-size: 70px;
+    margin: 0 0 0 50px;
+  }
+
+  & p {
+    margin: 40px 0 40px 50px;
+    width: 1000px;
+    font-weight: bold;
+  }
+
+  & .list {
+    background-color: #ddd;
+    padding: 50px;
+    border-radius: 20px;
+    height: 500px;
+  }
+
+  & .workSection {
+    margin: 50px 0;
+  }
+}
+
+.root {
+  flex-grow: 1;
 }
