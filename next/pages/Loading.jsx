@@ -28,10 +28,7 @@ const Loading = () => {
                     ...transitionStyles[state]
                 }}>
                     <div className={loadingStyle.body}>
-                      <div className={loadingStyle.threeDotSpinner}>
-                        <div className={loadingStyle.bounce1}></div>
-                        <div className={loadingStyle.bounce2}></div>
-                        <div className={loadingStyle.bounce3}></div>
+                      <div className={loadingStyle.spinner}>
                       </div>
                     </div>
                 </div>
