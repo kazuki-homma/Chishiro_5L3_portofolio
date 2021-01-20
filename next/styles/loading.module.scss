@@ -4,15 +4,40 @@ $cWhite: #fff;
     width: 100vw;
     height: 100vh;
     background-color: #283135;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 10000;
 
-    & .spinner {
-        width: 40px;
-        height: 40px;
-        background-color: #fff;
-        margin: auto;
+    & .loadingTitle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $cWhite;
+
+        & .char {
+            font-family: 'Concert One', cursive;
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(0);
+            animation: kf-animate-chars 4s cubic-bezier(0.39, 1.57, 0.58, 1) infinite;
+        }
+        @for $i from 1 through 12 {
+            & :nth-child(#{$i}) {
+                animation-delay: $i * 0.04s;
+            }
+        }
+
+        @keyframes kf-animate-chars {
+            0% {
+                opacity: 0;
+                transform: translateY(-50%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 }
