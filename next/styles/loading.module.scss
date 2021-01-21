@@ -8,6 +8,7 @@ $cWhite: #fff;
     top: 0;
     left: 0;
     z-index: 10000;
+    animation: loading-last 2s ease forwards;
 
     & .loadingTitle {
         position: absolute;
@@ -39,5 +40,17 @@ $cWhite: #fff;
                 transform: translateY(0);
             }
         }
+    }
+}
+
+@keyframes loading-last {
+    0% {
+      transform: translateY(0);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
     }
 }
