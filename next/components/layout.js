@@ -40,20 +40,10 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className={styles.logo}>
-        <img src="/logoImage.png" className={styles.logoImage}/>
-      </div>
       <Header />
       <div className={styles.scrollSign}>SCROLL</div>
       <div className={styles.contentsContainer}>
-      <BackDesign
-        centerBall={styles.centerBall}
-        centerInBall={styles.centerInBall}
-        topDesign={styles.topDesign}
-        video={styles.video}
-        concertTop={styles.concertTop}
-        news={styles.news}
-      />
+      <BackDesign />
       <main>{children}</main>
       </div>
       <SnsButtons 

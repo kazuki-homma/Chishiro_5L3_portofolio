@@ -1,17 +1,6 @@
 .container {
   width: 100vw;
 
-  & .logo {
-    width: 80px;
-    height: 100px;
-    position: fixed;
-
-    & .logoImage {
-      width: 50px;
-      margin: 20px;
-    }
-  }
-
   & .header {
     display: flex;
     position: fixed;
@@ -86,6 +75,16 @@
   & .contentsContainer {
     width: 90%;
     margin: 0 auto;
+    & .logo {
+      width: 80px;
+      height: 100px;
+      position: fixed;
+
+      & .logoTitle {
+        font-family: 'Concert One', cursive;
+        font-size: 20px;
+      }
+    }
 
     & .centerBall {
       width: 400px;

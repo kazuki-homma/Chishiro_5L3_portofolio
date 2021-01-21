@@ -1,25 +1,29 @@
+import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 
-const BackDesign = (props) => {
+const BackDesign = () => {
     return(
         <>
-            <div className={props.centerBall}>
+          <div className={styles.logo}>
+            <h1 className={styles.logoTitle}>Chishiro_5L3</h1>
+          </div>
+            <div className={styles.centerBall}>
             <video
                 id="background-video"
                 loop
                 autoPlay
                 muted
-                className={props.video}
+                className={styles.video}
             >
                 <source src={'/fnj3w-aimn2.mp4'} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             </div>
-            <div className={props.centerInBall}>
+            <div className={styles.centerInBall}>
             </div>
-            <section className={props.topDesign}>
-                <h1 className={props.concertTop}>Chishiro_5L3</h1>
-                <div className={props.news}>
+            <section className={styles.topDesign}>
+                <h1 className={styles.concertTop}>Chishiro_5L3</h1>
+                <div className={styles.news}>
                     <p>News: Portofolioサイトを作成しました</p>
                     <p>今後はブログやQiitaなどにも力を入れていく予定です。</p>
                 </div>

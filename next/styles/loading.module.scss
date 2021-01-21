@@ -21,7 +21,7 @@ $cWhite: #fff;
             display: inline-block;
             opacity: 0;
             transform: translateY(0);
-            animation: kf-animate-chars 4s cubic-bezier(0.39, 1.57, 0.58, 1) infinite;
+            animation: kf-animate-chars 5s cubic-bezier(0.39, 1.57, 0.58, 1) infinite;
         }
         @for $i from 1 through 12 {
             & :nth-child(#{$i}) {
