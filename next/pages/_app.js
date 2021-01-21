@@ -10,7 +10,6 @@ import '../styles/global.scss'
 import Loading from './Loading';
 
 export default function App({ Component, pageProps }) {
-    const [isLoading, nowLoading] = useState(true);
 
     // Remove the server-side injected CSS.(https://material-ui.com/guides/server-rendering/)
     useEffect(() => {
@@ -20,7 +19,6 @@ export default function App({ Component, pageProps }) {
       }
     }, [])
 
-    setTimeout(() => nowLoading(false), 5800);
     return (
         <MaterialUIThemeProvider theme={theme}>
           <Head>
@@ -29,10 +27,8 @@ export default function App({ Component, pageProps }) {
             <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
           </Head>
           <CssBaseline />
-          {isLoading
-            ? <Loading />
-            : <Component {...pageProps} />
-          }
+          <Loading />
+          <Component {...pageProps} />
         </MaterialUIThemeProvider>
     );
 }

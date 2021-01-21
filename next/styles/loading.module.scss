@@ -1,10 +1,11 @@
 $cWhite: #fff;
+$cBlack: #283135;
 
 .body {
     width: 100vw;
     height: 100vh;
-    background-color: #283135;
-    position: relative;
+    background-color: $cBlack;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
@@ -33,7 +34,7 @@ $cWhite: #fff;
         @keyframes kf-animate-chars {
             0% {
                 opacity: 0;
-                transform: translateY(-50%);
+                transform: translateY(-300%);
             }
             100% {
                 opacity: 1;

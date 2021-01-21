@@ -157,7 +157,7 @@
       position: relative;
       & h1 {
         position: absolute;
-        top: 42%;
+        top: 38%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
@@ -165,7 +165,7 @@
 
       & .concertTop {
         font-family: 'Concert One', cursive;
-        font-size: 60px;
+        font-size: 100px;
       }
 
       & .news {
@@ -202,8 +202,6 @@
     }
   }
 }
-
-
 
 // responsive sp -v 
 @media only screen and (max-width: 480px) {
