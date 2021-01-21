@@ -21,7 +21,7 @@ const Works = () => {
             <Grid container justify="center" spacing={spacing}>
             {allWorksData.map((work) => (
                 <Grid key={work.id} item>
-                <Card title={work.title} id={work.id}/>
+                  <Card title={work.title} id={work.id}/>
                 </Grid>
             ))}
             </Grid>
